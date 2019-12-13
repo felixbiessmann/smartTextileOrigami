@@ -1,3 +1,4 @@
+jupyter
 sklearn==0.22
 python-osc
 
