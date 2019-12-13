@@ -1,0 +1,44 @@
+#N canvas 459 45 971 717 12;
+#X floatatom 383 377 5 0 0 0 - - -;
+#X msg 473 321 disconnect;
+#X obj 385 348 netsend -u;
+#X obj 388 95 netreceive -u;
+#X msg 263 284 connect localhost 20007;
+#X msg 382 68 listen 7005;
+#X obj 86 157 spigot;
+#X obj 125 135 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 133 77 bng 30 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+-1;
+#X floatatom 268 152 5 0 5 0 - - -;
+#X obj 122 191 list append;
+#X msg 124 229 send \$1 \$2 \$3 \$4;
+#X obj 610 189 print prediction;
+#X msg 556 85 listen 7001;
+#X obj 579 150 oscparse;
+#X obj 562 112 netreceive -u -b;
+#X text 550 50 Receives the prediction as OSC signal from python;
+#X text 229 31 receives the sensor data from bela board;
+#X text 264 184 this is a label/category;
+#X text 379 401 sends the data to python along with the label in the
+last position of a list \; when python program is in prediction mode
+\, the label sent to it will be ignored;
+#X text 23 18 Push this button to start sending data to python;
+#X obj 124 264 s values;
+#X obj 386 318 r values;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 6 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 10 0;
+#X connect 7 0 6 1;
+#X connect 8 0 7 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 1;
+#X connect 10 0 11 0;
+#X connect 11 0 21 0;
+#X connect 13 0 15 0;
+#X connect 14 0 12 0;
+#X connect 15 0 14 0;
+#X connect 22 0 2 0;
