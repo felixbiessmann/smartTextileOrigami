@@ -3,19 +3,19 @@
 A project exploring e-textiles as interfaces for machine learning (ML) models. 
 
 We use [puredata](https://puredata.info/) on a [Bela board](https://bela.io/) to record sensor data from smart textiles. The recorded sensor data is sent to a python program. The python program operates in three steps:
-    * **Recording Training Data**: Training data for a machine learning model is recorded
-    * **Training the ML model**
-    * **Prediction Phase**: The trained ML model makes predictions using sensor data
+   * **Recording Training Data**: Training data for a machine learning model is recorded
+   * **Training the ML model**
+   * **Prediction Phase**: The trained ML model makes predictions using sensor data
 
 ## Installation (on OSX)
 
-    * Install [puredata](https://puredata.info/)
-    * Install python, we used the [anaconda distribution](https://www.anaconda.com/distribution/#download-section) 
-    * Clone this github repo
-    * Create a conda python environment with 
+   * Install [puredata](https://puredata.info/)
+   * Install python, we used the [anaconda distribution](https://www.anaconda.com/distribution/#download-section) 
+   * Clone this github repo
+   * Create a conda python environment with 
         ``conda create -n origami python=3.6`` (where origami is the arbitrarily chosen project name)
-    * Enter the python environment with ``conda activate origami``
-    * Install the required python packages with ``pip install -r requirements.txt`` in the folder of the downloaded github repo
+   * Enter the python environment with ``conda activate origami``
+   * Install the required python packages with ``pip install -r requirements.txt`` in the folder of the downloaded github repo
 
 ## Running the code
 
